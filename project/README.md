@@ -9,10 +9,10 @@ We first clean the reviews in https://github.com/cdepeuter/columbia-deep-learnin
 ### Baseline models:
 
 We first build 4 different baseline models as in the paper:
-	- Bag of words: (take the top 50,000 features) (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/bow.py)
-	- Bag of words + tfidf (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/bow_tfidf.py)
-	- Ngrams (top 500,000 1-5 grams) (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/ngrams.py)
-	- Ngrams + tfidf (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/tfidf_ngram.py)
+* Bag of words: (take the top 50,000 features) (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/bow.py)
+* Bag of words + tfidf (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/bow_tfidf.py)
+* Ngrams (top 500,000 1-5 grams) (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/ngrams.py)
+* Ngrams + tfidf (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/tfidf_ngram.py)
 
 
 We use reviews across a wide range of products (https://github.com/cdepeuter/columbia-deep-learning/blob/master/project/amazon_data_files.py), and train on 3,000,000 reviews, and test on 600,000 reviews. The models are run and results are written to the /results folder using Google Cloud Platform. When each model is run i.e. `$ python bow.py` the reviews are pulled from the bucket in a deterministic order, and read into a dataframe. The features are calcualted and then the data is split into train/test sets. The baseline models are all Logistic Regression as in the paper.
