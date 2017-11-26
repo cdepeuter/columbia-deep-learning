@@ -1,0 +1,1 @@
+bag of words+tfidf accuracy: 0.927003333333
